@@ -1,0 +1,150 @@
+{
+    "q_table": {
+        "('city_center', 'detected')": {
+            "industrial_zone": 0.0,
+            "residential_area": 0.0,
+            "train_station": 0.0
+        },
+        "('city_center', 'undetected')": {
+            "industrial_zone": 0.0,
+            "residential_area": 0.0,
+            "train_station": 0.0
+        },
+        "('industrial_zone', 'detected')": {
+            "city_center": 0.0,
+            "highway_entrance": 0.0
+        },
+        "('industrial_zone', 'undetected')": {
+            "city_center": 0.0,
+            "highway_entrance": 0.0
+        },
+        "('residential_area', 'detected')": {
+            "city_center": 0.0,
+            "shopping_mall": 0.0
+        },
+        "('residential_area', 'undetected')": {
+            "city_center": 0.0,
+            "shopping_mall": 0.0
+        },
+        "('shopping_mall', 'detected')": {
+            "residential_area": 0.0,
+            "park": 0.0
+        },
+        "('shopping_mall', 'undetected')": {
+            "residential_area": 0.0,
+            "park": 0.0
+        },
+        "('park', 'detected')": {
+            "shopping_mall": 0.0,
+            "highway_entrance": 0.0
+        },
+        "('park', 'undetected')": {
+            "shopping_mall": 0.0,
+            "highway_entrance": 0.0
+        },
+        "('highway_entrance', 'detected')": {
+            "industrial_zone": 0.0,
+            "park": 0.0,
+            "port": 0.0
+        },
+        "('highway_entrance', 'undetected')": {
+            "industrial_zone": 0.0,
+            "park": 0.0,
+            "port": 0.0
+        },
+        "('port', 'detected')": {
+            "highway_entrance": 0.0,
+            "train_station": 0.0
+        },
+        "('port', 'undetected')": {
+            "highway_entrance": 0.0,
+            "train_station": 0.0
+        },
+        "('train_station', 'detected')": {
+            "city_center": 0.0,
+            "port": 0.0
+        },
+        "('train_station', 'undetected')": {
+            "city_center": 0.0,
+            "port": 0.0
+        }
+    },
+    "camera_detection_history": {},
+    "pattern_memory": {
+        "place_camera": [
+            {
+                "details": {
+                    "id": 1,
+                    "location": "shopping_mall",
+                    "range": 3
+                },
+                "time": 10.040000000000001,
+                "ai_position": "city_center"
+            },
+            {
+                "details": {
+                    "id": 1,
+                    "location": "shopping_mall",
+                    "range": 3
+                },
+                "time": 10.040000000000001,
+                "ai_position": "city_center"
+            },
+            {
+                "details": {
+                    "id": 2,
+                    "location": "city_center",
+                    "range": 3
+                },
+                "time": 17.628999999999795,
+                "ai_position": "city_center"
+            },
+            {
+                "details": {
+                    "id": 1,
+                    "location": "shopping_mall",
+                    "range": 3
+                },
+                "time": 10.040000000000001,
+                "ai_position": "city_center"
+            },
+            {
+                "details": {
+                    "id": 2,
+                    "location": "city_center",
+                    "range": 3
+                },
+                "time": 17.628999999999795,
+                "ai_position": "city_center"
+            },
+            {
+                "details": {
+                    "id": 1,
+                    "location": "shopping_mall",
+                    "range": 3
+                },
+                "time": 10.040000000000001,
+                "ai_position": "city_center"
+            },
+            {
+                "details": {
+                    "id": 2,
+                    "location": "city_center",
+                    "range": 3
+                },
+                "time": 17.628999999999795,
+                "ai_position": "city_center"
+            },
+            {
+                "details": {
+                    "id": 3,
+                    "location": "industrial_zone",
+                    "range": 3
+                },
+                "time": 26.866999999999187,
+                "ai_position": "city_center"
+            }
+        ]
+    },
+    "successful_routes": []
+}

@@ -1,0 +1,9 @@
+{
+    "screen_width": 1024,
+    "screen_height": 768,
+    "ai_turn_interval": 5000,
+    "camera_range_default": 3,
+    "decoy_duration": 30,
+    "enable_sound": true,
+    "difficulty": "medium"
+}
