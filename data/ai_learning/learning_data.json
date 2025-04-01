@@ -78,7 +78,7 @@
                     "location": "shopping_mall",
                     "range": 3
                 },
-                "time": 10.040000000000001,
+                "time": 8.740000000000041,
                 "ai_position": "city_center"
             },
             {
@@ -87,16 +87,16 @@
                     "location": "shopping_mall",
                     "range": 3
                 },
-                "time": 10.040000000000001,
+                "time": 8.740000000000041,
                 "ai_position": "city_center"
             },
             {
                 "details": {
                     "id": 2,
-                    "location": "city_center",
+                    "location": "highway_entrance",
                     "range": 3
                 },
-                "time": 17.628999999999795,
+                "time": 11.158999999999974,
                 "ai_position": "city_center"
             },
             {
@@ -105,43 +105,16 @@
                     "location": "shopping_mall",
                     "range": 3
                 },
-                "time": 10.040000000000001,
+                "time": 8.740000000000041,
                 "ai_position": "city_center"
             },
             {
                 "details": {
                     "id": 2,
-                    "location": "city_center",
+                    "location": "highway_entrance",
                     "range": 3
                 },
-                "time": 17.628999999999795,
-                "ai_position": "city_center"
-            },
-            {
-                "details": {
-                    "id": 1,
-                    "location": "shopping_mall",
-                    "range": 3
-                },
-                "time": 10.040000000000001,
-                "ai_position": "city_center"
-            },
-            {
-                "details": {
-                    "id": 2,
-                    "location": "city_center",
-                    "range": 3
-                },
-                "time": 17.628999999999795,
-                "ai_position": "city_center"
-            },
-            {
-                "details": {
-                    "id": 3,
-                    "location": "industrial_zone",
-                    "range": 3
-                },
-                "time": 26.866999999999187,
+                "time": 11.158999999999974,
                 "ai_position": "city_center"
             }
         ]
