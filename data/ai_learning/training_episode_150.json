@@ -1,0 +1,145 @@
+{
+    "q_table": {
+        "('city_center', 'undetected')": {
+            "industrial_zone": 0.0,
+            "residential_area": 0.0,
+            "create_decoy": 0.0
+        },
+        "('pos_1_1', 'undetected')": {
+            "move_to_1_1": 0.37895037332924203,
+            "move_to_1_2": 0.3600478738279417
+        },
+        "('pos_1_2', 'undetected')": {
+            "move_to_1_3": 0.288703859084955,
+            "move_to_2_2": -9.611532353276834
+        },
+        "('pos_1_3', 'undetected')": {
+            "move_to_1_4": -0.04365819404150168
+        },
+        "('pos_1_4', 'undetected')": {
+            "move_to_2_4": -0.8281676606449659
+        },
+        "('pos_2_4', 'undetected')": {
+            "move_to_2_5": -2.3360145285264506
+        },
+        "('pos_2_5', 'undetected')": {
+            "move_to_2_6": -4.627109427908982
+        },
+        "('pos_2_6', 'undetected')": {
+            "move_to_2_7": -7.2852298826153
+        },
+        "('pos_2_7', 'undetected')": {
+            "move_to_3_7": -9.589827697936599
+        },
+        "('pos_3_7', 'undetected')": {
+            "move_to_4_7": -2.1829936322740657
+        },
+        "('pos_4_7', 'undetected')": {
+            "move_to_5_7": -6.449723674113532
+        },
+        "('pos_5_7', 'undetected')": {
+            "move_to_6_7": 0.1820930580125893
+        },
+        "('pos_6_7', 'undetected')": {
+            "move_to_7_7": 0.1820929800832687
+        },
+        "('pos_7_7', 'undetected')": {
+            "move_to_8_7": 0.18209181199064164
+        },
+        "('pos_8_7', 'undetected')": {
+            "move_to_8_8": 0.18207753353503794
+        },
+        "('pos_8_8', 'undetected')": {
+            "move_to_8_9": 0.18193461071384703
+        },
+        "('pos_8_9', 'undetected')": {
+            "move_to_9_9": 0.18076300004979579
+        },
+        "('pos_9_9', 'undetected')": {
+            "move_to_10_9": 0.17292796918707473
+        },
+        "('pos_10_9', 'undetected')": {
+            "move_to_10_10": 0.13053808124840025
+        },
+        "('pos_10_10', 'undetected')": {
+            "move_to_11_10": -0.052462520216664865
+        },
+        "('pos_11_10', 'undetected')": {
+            "move_to_12_10": -0.6695781629044588,
+            "move_to_11_11": -5.386434682332547
+        },
+        "('pos_12_10', 'undetected')": {
+            "move_to_13_10": -2.243312129533566
+        },
+        "('pos_13_10', 'undetected')": {
+            "move_to_13_11": -5.12977285597468
+        },
+        "('pos_13_11', 'undetected')": {
+            "move_to_13_12": -8.649148282327008
+        },
+        "('pos_13_12', 'detected')": {},
+        "('pos_5_7', 'detected')": {},
+        "('pos_3_7', 'detected')": {},
+        "('pos_1_1', 'detected')": {},
+        "('pos_2_2', 'undetected')": {
+            "move_to_3_2": 0.18209306240276835
+        },
+        "('pos_3_2', 'undetected')": {
+            "move_to_4_2": 0.18209306240273732
+        },
+        "('pos_4_2', 'undetected')": {
+            "move_to_5_2": 0.1820930624018067
+        },
+        "('pos_5_2', 'undetected')": {
+            "move_to_6_2": 0.18209306238000486
+        },
+        "('pos_6_2', 'undetected')": {
+            "move_to_7_2": 0.1820930619708223
+        },
+        "('pos_7_2', 'undetected')": {
+            "move_to_8_2": 0.18209305570605866
+        },
+        "('pos_8_2', 'undetected')": {
+            "move_to_9_2": 0.18209297639492897
+        },
+        "('pos_9_2', 'undetected')": {
+            "move_to_10_2": 0.18209213745988284
+        },
+        "('pos_10_2', 'undetected')": {
+            "move_to_11_2": 0.182084664611727
+        },
+        "('pos_11_2', 'undetected')": {
+            "move_to_11_3": 0.18202833578914843
+        },
+        "('pos_11_3', 'undetected')": {
+            "move_to_11_4": 0.18166877078710075
+        },
+        "('pos_11_4', 'undetected')": {
+            "move_to_11_5": 0.17973540193658463
+        },
+        "('pos_11_5', 'undetected')": {
+            "move_to_11_6": 0.17109582254837638
+        },
+        "('pos_11_6', 'undetected')": {
+            "move_to_11_7": 0.13975856893877406
+        },
+        "('pos_11_7', 'undetected')": {
+            "move_to_11_8": 0.050756791049648406
+        },
+        "('pos_11_8', 'undetected')": {
+            "move_to_11_9": -0.13715910076949164
+        },
+        "('pos_11_9', 'undetected')": {
+            "move_to_11_10": -0.4116105312777993
+        },
+        "('pos_11_11', 'undetected')": {
+            "move_to_11_12": -8.784233454094307
+        },
+        "('pos_11_12', 'detected')": {},
+        "('pos_2_2', 'detected')": {}
+    },
+    "camera_detection_history": {},
+    "pattern_memory": {},
+    "successful_routes": [],
+    "deception_rate": 0.3
+}

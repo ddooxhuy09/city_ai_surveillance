@@ -1,0 +1,107 @@
+{
+  "player_id": "default_player",
+  "detection_success": 0,
+  "detection_failure": 3,
+  "games_played": 3,
+  "detection_rate": 0.0,
+  "camera_placement_patterns": {
+    "14_17": 1,
+    "3_3": 1,
+    "6_3": 1
+  },
+  "common_mistakes": {
+    "too_few_cameras": 2
+  },
+  "common_locations": [
+    "14_17",
+    "3_3",
+    "6_3"
+  ],
+  "last_update": 1743554948.4878864,
+  "game_sessions": [
+    {
+      "timestamp": 1743554948.4878864,
+      "actions": [
+        {
+          "type": "start_simulation",
+          "time": 1743554899.2569578,
+          "cameras": 0
+        },
+        {
+          "type": "ai_escaped",
+          "position": [
+            18,
+            18
+          ],
+          "time": 1743554907.0669227
+        },
+        {
+          "type": "place_camera",
+          "camera_id": 0,
+          "position": [
+            14,
+            17
+          ],
+          "time": 1743554911.8284721
+        },
+        {
+          "type": "reset_game",
+          "time": 1743554913.6148577
+        },
+        {
+          "type": "start_simulation",
+          "time": 1743554914.6607027,
+          "cameras": 1
+        },
+        {
+          "type": "ai_escaped",
+          "position": [
+            18,
+            18
+          ],
+          "time": 1743554922.5918686
+        },
+        {
+          "type": "place_camera",
+          "camera_id": 1,
+          "position": [
+            3,
+            3
+          ],
+          "time": 1743554931.587834
+        },
+        {
+          "type": "place_camera",
+          "camera_id": 2,
+          "position": [
+            6,
+            3
+          ],
+          "time": 1743554932.6640713
+        },
+        {
+          "type": "start_simulation",
+          "time": 1743554933.94106,
+          "cameras": 3
+        },
+        {
+          "type": "ai_escaped",
+          "position": [
+            18,
+            18
+          ],
+          "time": 1743554933.9419599
+        },
+        {
+          "type": "reset_game",
+          "time": 1743554935.047185
+        },
+        {
+          "type": "start_simulation",
+          "time": 1743554936.0412068,
+          "cameras": 3
+        }
+      ]
+    }
+  ]
+}

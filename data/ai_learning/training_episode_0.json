@@ -1,0 +1,84 @@
+{
+    "q_table": {
+        "('city_center', 'undetected')": {
+            "industrial_zone": 0.0,
+            "residential_area": 0.0,
+            "create_decoy": 0.0
+        },
+        "('pos_1_1', 'undetected')": {
+            "move_to_1_1": 0.010000000000000002,
+            "move_to_1_2": 0.010000000000000002
+        },
+        "('pos_1_2', 'undetected')": {
+            "move_to_1_3": 0.010000000000000002
+        },
+        "('pos_1_3', 'undetected')": {
+            "move_to_1_4": 0.010000000000000002
+        },
+        "('pos_1_4', 'undetected')": {
+            "move_to_2_4": 0.010000000000000002
+        },
+        "('pos_2_4', 'undetected')": {
+            "move_to_2_5": 0.010000000000000002
+        },
+        "('pos_2_5', 'undetected')": {
+            "move_to_2_6": 0.010000000000000002
+        },
+        "('pos_2_6', 'undetected')": {
+            "move_to_2_7": 0.010000000000000002
+        },
+        "('pos_2_7', 'undetected')": {
+            "move_to_3_7": 0.010000000000000002
+        },
+        "('pos_3_7', 'undetected')": {
+            "move_to_4_7": 0.010000000000000002
+        },
+        "('pos_4_7', 'undetected')": {
+            "move_to_5_7": 0.010000000000000002
+        },
+        "('pos_5_7', 'undetected')": {
+            "move_to_6_7": 0.010000000000000002
+        },
+        "('pos_6_7', 'undetected')": {
+            "move_to_7_7": 0.010000000000000002
+        },
+        "('pos_7_7', 'undetected')": {
+            "move_to_8_7": 0.010000000000000002
+        },
+        "('pos_8_7', 'undetected')": {
+            "move_to_8_8": 0.010000000000000002
+        },
+        "('pos_8_8', 'undetected')": {
+            "move_to_8_9": 0.010000000000000002
+        },
+        "('pos_8_9', 'undetected')": {
+            "move_to_9_9": 0.010000000000000002
+        },
+        "('pos_9_9', 'undetected')": {
+            "move_to_10_9": 0.010000000000000002
+        },
+        "('pos_10_9', 'undetected')": {
+            "move_to_10_10": 0.010000000000000002
+        },
+        "('pos_10_10', 'undetected')": {
+            "move_to_11_10": 0.010000000000000002
+        },
+        "('pos_11_10', 'undetected')": {
+            "move_to_12_10": 0.010000000000000002
+        },
+        "('pos_12_10', 'undetected')": {
+            "move_to_13_10": 0.010000000000000002
+        },
+        "('pos_13_10', 'undetected')": {
+            "move_to_13_11": 0.010000000000000002
+        },
+        "('pos_13_11', 'undetected')": {
+            "move_to_13_12": -1.0
+        },
+        "('pos_13_12', 'detected')": {}
+    },
+    "camera_detection_history": {},
+    "pattern_memory": {},
+    "successful_routes": [],
+    "deception_rate": 0.3
+}

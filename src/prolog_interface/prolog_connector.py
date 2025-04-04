@@ -1,6 +1,4 @@
-"""
-Provides an interface for Python code to interact with Prolog.
-"""
+""" Provides an interface for Python code to interact with Prolog. """ 
 import os
 import time
 import random
@@ -10,24 +8,23 @@ class MockProlog:
     def __init__(self):
         self.facts = {}
         self.rules = {}
+        self.use_mock = True
         print("Khởi tạo MockProlog để thay thế SWI-Prolog")
-    
+
     def query(self, query_string):
         """Mock a Prolog query with reasonable responses."""
         print(f"Mock query: {query_string}")
-        
+
         # Parse query string to provide reasonable responses
         if "location(X)" in query_string:
-            locations = ["city_center", "industrial_zone", "residential_area", 
-                         "shopping_mall", "park", "highway_entrance", 
-                         "port", "train_station"]
+            locations = ["city_center", "industrial_zone", "residential_area", "shopping_mall", "park", "highway_entrance", "port", "train_station"]
             return [{"X": loc} for loc in locations]
-        
+
         elif "connected(" in query_string:
             # Extract location from query
             parts = query_string.split("(")[1].split(",")
             loc1 = parts[0].strip()
-            
+
             if loc1 == "city_center":
                 return [{"X": "industrial_zone"}, {"X": "residential_area"}, {"X": "train_station"}]
             elif loc1 == "industrial_zone":
@@ -46,39 +43,39 @@ class MockProlog:
                 return [{"X": "city_center"}, {"X": "port"}]
             else:
                 return []
-        
+
         elif "exit_point(X)" in query_string:
             return [{"X": "highway_entrance"}, {"X": "port"}, {"X": "train_station"}]
-        
+
         elif "ai_state(position, Pos), ai_state(detected, Status)" in query_string:
             return [{"Pos": "city_center", "Status": "undetected"}]
-        
+
         elif "learn_camera_pattern" in query_string:
             return [{}]  # Success, no return value
-        
+
         else:
             return []  # Default empty response
-    
+
     def assertz(self, fact):
         """Mock asserting a fact."""
         print(f"Mock assertz: {fact}")
         return True
-    
+
     def retract(self, fact):
         """Mock retracting a fact."""
         print(f"Mock retract: {fact}")
         return True
-    
+
     def retractall(self, pattern):
         """Mock retracting all matching facts."""
         print(f"Mock retractall: {pattern}")
         return True
 
 class PrologConnector:
-    def __init__(self, use_mock=False):
+    def __init__(self, use_mock=True):
         """Initialize the Prolog connector."""
         self.use_mock = use_mock
-        
+
         if use_mock:
             self.prolog = MockProlog()
         else:
@@ -91,18 +88,18 @@ class PrologConnector:
                 print("Chuyển sang sử dụng MockProlog")
                 self.prolog = MockProlog()
                 self.use_mock = True
-        
+
     def load_knowledge_base(self):
         """Load all Prolog knowledge base files."""
         prolog_dir = "prolog"
-        
+
         # Kiểm tra thư mục tồn tại
         if not os.path.exists(prolog_dir):
             os.makedirs(prolog_dir)
             print(f"Đã tạo thư mục {prolog_dir}")
             # Tạo các file Prolog nếu chưa tồn tại
             self._create_prolog_files(prolog_dir)
-        
+
         # Kiểm tra các file tồn tại
         required_files = ["kb_city.pl", "kb_surveillance.pl", "kb_ai_behavior.pl", "kb_rules.pl"]
         for file in required_files:
@@ -110,7 +107,7 @@ class PrologConnector:
             if not os.path.exists(file_path):
                 print(f"Tạo file {file_path} vì không tồn tại")
                 self._create_prolog_file(file_path, file)
-        
+
         # Nạp các file Prolog
         try:
             if not self.use_mock:
@@ -118,7 +115,7 @@ class PrologConnector:
                 self.consult(os.path.join(prolog_dir, "kb_surveillance.pl"))
                 self.consult(os.path.join(prolog_dir, "kb_ai_behavior.pl"))
                 self.consult(os.path.join(prolog_dir, "kb_rules.pl"))
-            
+
             # Khởi tạo trạng thái ban đầu
             self.assertz("ai_state(position, city_center)")
             self.assertz("ai_state(detected, undetected)")
@@ -126,18 +123,18 @@ class PrologConnector:
             self.assertz("ai_state(escape_plan, [])")
         except Exception as e:
             print(f"Lỗi khi nạp cơ sở tri thức: {e}")
-    
+
     def _create_prolog_files(self, prolog_dir):
         """Create Prolog files with default content if they don't exist."""
         self._create_prolog_file(os.path.join(prolog_dir, "kb_city.pl"), "kb_city.pl")
         self._create_prolog_file(os.path.join(prolog_dir, "kb_surveillance.pl"), "kb_surveillance.pl")
         self._create_prolog_file(os.path.join(prolog_dir, "kb_ai_behavior.pl"), "kb_ai_behavior.pl")
         self._create_prolog_file(os.path.join(prolog_dir, "kb_rules.pl"), "kb_rules.pl")
-    
+
     def _create_prolog_file(self, file_path, file_type):
         """Create a specific Prolog file with appropriate content."""
         content = ""
-        
+
         if "kb_city.pl" in file_type:
             content = """% City Map Knowledge Base
 % Defines locations and connections between them
@@ -268,13 +265,19 @@ learn_camera_pattern(CameraID) :-
     retract(ai_state(known_cameras, KnownCameras)),
     assertz(ai_state(known_cameras, UpdatedCameras)).
 
+% Create a random number between Min and Max
+random(Min, Max, Result) :-
+    Range is Max - Min,
+    Result is Min + random(Range).
+
 % Rules for creating false signals
 create_false_signal(Location) :-
     ai_state(position, CurrentPos),
     can_create_decoy(CurrentPos),
     location(Location),
     Location \\= CurrentPos,
-    assertz(decoy_signal(Location, 75)).
+    random(50, 100, Strength),
+    assertz(decoy_signal(Location, Strength)).
 
 % Evaluate effectiveness of a decoy
 evaluate_decoy_effectiveness(Location, Effectiveness) :-
@@ -283,16 +286,16 @@ evaluate_decoy_effectiveness(Location, Effectiveness) :-
     length(CoveringCameras, NumCameras),
     Effectiveness is Strength * NumCameras.
 """
-        
+
         with open(file_path, 'w') as f:
             f.write(content)
-    
+
     def consult(self, filename):
         """Load a Prolog file with proper path handling."""
         if self.use_mock:
             print(f"Giả lập nạp file: {filename}")
             return True
-        
+
         try:
             # Thay thế backslash bằng forward slash
             normalized_path = filename.replace('\\', '/')
@@ -304,7 +307,7 @@ evaluate_decoy_effectiveness(Location, Effectiveness) :-
                 content = f.read()
             
             # Tách các mệnh đề và xử lý từng mệnh đề
-            for clause in content.split('.'):
+            for clause in content.split('. '):
                 clause = clause.strip()
                 if clause and not clause.startswith('%'):  # Bỏ qua comment và dòng trống
                     try:
@@ -316,23 +319,23 @@ evaluate_decoy_effectiveness(Location, Effectiveness) :-
         except Exception as e:
             print(f"Lỗi khi tải file Prolog {filename}: {e}")
             return False
-    
-    def query(self, query_string, **kwargs):
+
+    def query(self, query_string, *args, **kwargs):
         """Run a Prolog query."""
-        return self.prolog.query(query_string, **kwargs)
-    
+        return self.prolog.query(query_string, *args, **kwargs)
+
     def assertz(self, fact):
         """Assert a new fact to the Prolog database."""
         return self.prolog.assertz(fact)
-    
+
     def retract(self, fact):
         """Retract a fact from the Prolog database."""
         return self.prolog.retract(fact)
-    
+
     def retractall(self, pattern):
         """Retract all facts matching a pattern."""
         return self.prolog.retractall(pattern)
-    
+
     def reset_ai_state(self):
         """Reset the AI state in the Prolog knowledge base."""
         # Retract all AI state facts
